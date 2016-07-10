@@ -930,6 +930,134 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/20/Bash历史命令/" itemprop="url">
+                  Bash历史命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-20T22:53:08+08:00" content="2016-03-20">
+              2016-03-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/20/Bash历史命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/20/Bash历史命令/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <img src="/2016/03/20/Bash历史命令/linux1.jpg" alt="linux1.jpg" title="">
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="1-清空历史命令："><a href="#1-清空历史命令：" class="headerlink" title="1.清空历史命令："></a>1.清空历史命令：</h2><pre><code>history -c 
+</code></pre><h2 id="2-强制保存到历史命令文件-bash-history-中："><a href="#2-强制保存到历史命令文件-bash-history-中：" class="headerlink" title="2.强制保存到历史命令文件(~/.bash_history)中："></a>2.强制保存到历史命令文件(~/.bash_history)中：</h2><pre><code>history  -w
+</code></pre><h2 id="3-更改历史命令保存文件存的条数"><a href="#3-更改历史命令保存文件存的条数" class="headerlink" title="3.更改历史命令保存文件存的条数"></a>3.更改历史命令保存文件存的条数</h2><pre><code>&lt;!--more--&gt;
+vim /etc/profile   （profile是环境变量的配置文件）
+HISTZISE=1000
+</code></pre><h2 id="4-历史命令的调用："><a href="#4-历史命令的调用：" class="headerlink" title="4.历史命令的调用："></a>4.历史命令的调用：</h2><pre><code>!n  //重复执行第n条命令
+!!  //重复执行上一条命令
+!字符串  //重复执行最后一条的含有字符串的命令
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/20/Bash通配符/" itemprop="url">
                   Bash通配符及特殊符号
                 </a>
@@ -1255,134 +1383,6 @@
               阅读全文 &raquo;
             </a>
           </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/20/Bash历史命令/" itemprop="url">
-                  Bash历史命令
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-20T22:53:08+08:00" content="2016-03-20">
-              2016-03-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/20/Bash历史命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/20/Bash历史命令/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <img src="/2016/03/20/Bash历史命令/linux1.jpg" alt="linux1.jpg" title="">
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="1-清空历史命令："><a href="#1-清空历史命令：" class="headerlink" title="1.清空历史命令："></a>1.清空历史命令：</h2><pre><code>history -c 
-</code></pre><h2 id="2-强制保存到历史命令文件-bash-history-中："><a href="#2-强制保存到历史命令文件-bash-history-中：" class="headerlink" title="2.强制保存到历史命令文件(~/.bash_history)中："></a>2.强制保存到历史命令文件(~/.bash_history)中：</h2><pre><code>history  -w
-</code></pre><h2 id="3-更改历史命令保存文件存的条数"><a href="#3-更改历史命令保存文件存的条数" class="headerlink" title="3.更改历史命令保存文件存的条数"></a>3.更改历史命令保存文件存的条数</h2><pre><code>&lt;!--more--&gt;
-vim /etc/profile   （profile是环境变量的配置文件）
-HISTZISE=1000
-</code></pre><h2 id="4-历史命令的调用："><a href="#4-历史命令的调用：" class="headerlink" title="4.历史命令的调用："></a>4.历史命令的调用：</h2><pre><code>!n  //重复执行第n条命令
-!!  //重复执行上一条命令
-!字符串  //重复执行最后一条的含有字符串的命令
-</code></pre>
-          
         
       
     </div>
