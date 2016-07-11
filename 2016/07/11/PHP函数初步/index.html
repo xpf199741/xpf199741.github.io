@@ -84,12 +84,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="昨 夜 凛 雨">
-<meta property="og:url" content="http://xpf199741.github.io/categories/Web/index.html">
+<meta name="description" content="普通函数的定义及调用与js相似,这个定义方式无需返回值,哪怕是有返回值在声明的时候也无需添加
+再后来的PHP版本中是添加了一向很有用的功能就是可在函数定义之前进行调用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP函数初步">
+<meta property="og:url" content="http://xpf199741.github.io/2016/07/11/PHP函数初步/index.html">
 <meta property="og:site_name" content="昨 夜 凛 雨">
+<meta property="og:description" content="普通函数的定义及调用与js相似,这个定义方式无需返回值,哪怕是有返回值在声明的时候也无需添加
+再后来的PHP版本中是添加了一向很有用的功能就是可在函数定义之前进行调用">
+<meta property="og:image" content="http://i1.piimg.com/567571/08b84aa22853082f.jpg">
+<meta property="og:updated_time" content="2016-07-11T10:31:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="昨 夜 凛 雨">
+<meta name="twitter:title" content="PHP函数初步">
+<meta name="twitter:description" content="普通函数的定义及调用与js相似,这个定义方式无需返回值,哪怕是有返回值在声明的时候也无需添加
+再后来的PHP版本中是添加了一向很有用的功能就是可在函数定义之前进行调用">
+<meta name="twitter:image" content="http://i1.piimg.com/567571/08b84aa22853082f.jpg">
 
 
 
@@ -107,7 +116,7 @@
   };
 </script>
 
-  <title> 分类: Web | 昨 夜 凛 雨 </title>
+  <title> PHP函数初步 | 昨 夜 凛 雨 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -138,7 +147,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -236,80 +245,165 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        Web
-        <small>分类</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/04/关于apache端口被占用/" itemprop="url">
-              
-                <span itemprop="name">关于apache端口被占用</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-04T17:59:44+08:00"
-              content="2016-04-04" >
-          04-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/03/20/虚拟机的三种网络连接方式/" itemprop="url">
-              
-                <span itemprop="name">虚拟机的三种网络连接方式</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-03-20T22:53:08+08:00"
-              content="2016-03-20" >
-          03-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                PHP函数初步
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-11T18:26:43+08:00" content="2016-07-11">
+              2016-07-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/11/PHP函数初步/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/11/PHP函数初步/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://i1.piimg.com/567571/08b84aa22853082f.jpg" alt=""></p>
+<ol>
+<li>普通函数的定义及调用与js相似,这个定义方式无需返回值,哪怕是有返回值在声明的时候也无需添加</li>
+<li><p>再后来的PHP版本中是添加了一向很有用的功能就是可在函数定义之前进行调用</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">echo add(1,2);</div><div class="line">echo &quot;&lt;/br&gt;&quot;;</div><div class="line">function add($a,$b)&#123;</div><div class="line">    return $a+$b;</div><div class="line">&#125;</div><div class="line">function sub($a,$b)&#123;</div><div class="line">    return $a-$b;</div><div class="line">&#125;</div><div class="line">echo add(23,12);</div><div class="line">echo &quot;&lt;/br&gt;&quot;;</div><div class="line">echo sub(23,22);</div><div class="line">echo &quot;&lt;/br&gt;&quot;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>下面是一个非常有用的功能就是变量函数,顾名思义就是将函数作为一个变量。</p>
+</li>
+<li>其优点在于用同一个变量可以调用不同的函数,非常类似于函数的多态调用。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$var=&quot;add&quot;;</div><div class="line">echo $var(4,2);</div><div class="line">echo &quot;&lt;/br&gt;&quot;;</div><div class="line">$var=&quot;sub&quot;;</div><div class="line">echo $var(4,2);</div><div class="line">echo &quot;&lt;/br&gt;&quot;;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/10/放弃一个你爱很久的人是什么感觉/" rel="next" title="放弃一个你爱很久的人是什么感觉">
+                <i class="fa fa-chevron-left"></i> 放弃一个你爱很久的人是什么感觉
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/07/11/PHP函数初步/"
+     data-title="PHP函数初步"
+     data-content=""
+     data-url="http://xpf199741.github.io/2016/07/11/PHP函数初步/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
           
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/11/PHP函数初步/"
+           data-title="PHP函数初步" data-url="http://xpf199741.github.io/2016/07/11/PHP函数初步/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -329,8 +423,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -373,6 +476,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -469,6 +583,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
