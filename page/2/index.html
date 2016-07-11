@@ -260,6 +260,134 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/20/Bash历史命令/" itemprop="url">
+                  Bash历史命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-20T22:53:08+08:00" content="2016-03-20">
+              2016-03-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/20/Bash历史命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/20/Bash历史命令/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <img src="/2016/03/20/Bash历史命令/linux1.jpg" alt="linux1.jpg" title="">
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="1-清空历史命令："><a href="#1-清空历史命令：" class="headerlink" title="1.清空历史命令："></a>1.清空历史命令：</h2><pre><code>history -c 
+</code></pre><h2 id="2-强制保存到历史命令文件-bash-history-中："><a href="#2-强制保存到历史命令文件-bash-history-中：" class="headerlink" title="2.强制保存到历史命令文件(~/.bash_history)中："></a>2.强制保存到历史命令文件(~/.bash_history)中：</h2><pre><code>history  -w
+</code></pre><h2 id="3-更改历史命令保存文件存的条数"><a href="#3-更改历史命令保存文件存的条数" class="headerlink" title="3.更改历史命令保存文件存的条数"></a>3.更改历史命令保存文件存的条数</h2><pre><code>&lt;!--more--&gt;
+vim /etc/profile   （profile是环境变量的配置文件）
+HISTZISE=1000
+</code></pre><h2 id="4-历史命令的调用："><a href="#4-历史命令的调用：" class="headerlink" title="4.历史命令的调用："></a>4.历史命令的调用：</h2><pre><code>!n  //重复执行第n条命令
+!!  //重复执行上一条命令
+!字符串  //重复执行最后一条的含有字符串的命令
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/20/2016-3-20/" itemprop="url">
                   2016-3-20小记
                 </a>
@@ -384,8 +512,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/03/20/Bash通配符/" itemprop="url">
-                  Bash通配符及特殊符号
+                <a class="post-title-link" href="/2016/03/20/Bash别名与快捷键/" itemprop="url">
+                  Bash别名与快捷键
                 </a>
               
             
@@ -413,7 +541,7 @@
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                    <span itemprop="name">-Linux</span>
                   </a>
                 </span>
 
@@ -428,8 +556,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/20/Bash通配符/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/20/Bash通配符/" itemprop="commentsCount"></span>
+                <a href="/2016/03/20/Bash别名与快捷键/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/20/Bash别名与快捷键/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -453,11 +581,11 @@
 
       
         
-          <img src="/2016/03/20/Bash通配符/jianpan.jpg" alt="jianpan.jpg" title="">
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="1-是任意多个任意字符-任意可以是0"><a href="#1-是任意多个任意字符-任意可以是0" class="headerlink" title="1.*是任意多个任意字符(任意可以是0)"></a>1.*是任意多个任意字符(任意可以是0)</h2><pre><code>ls *abc
-</code></pre><p>会显示所有以abc结尾的或者就是abc的文件<br>
+          <img src="/2016/03/20/Bash别名与快捷键/linux01.jpg" alt="linux01.jpg" title="">
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="1-定义别名："><a href="#1-定义别名：" class="headerlink" title="1.定义别名："></a>1.定义别名：</h2><pre><code>alias vi=&apos;vim&apos;
+</code></pre><h2 id="2-查看别名："><a href="#2-查看别名：" class="headerlink" title="2.查看别名："></a>2.查看别名：</h2>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/20/Bash通配符/#more" rel="contents">
+            <a class="btn" href="/2016/03/20/Bash别名与快捷键/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -895,6 +1023,110 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/09/Hexo/" itemprop="url">
+                  在Windows下搭建Hexo
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-09T13:01:47+08:00" content="2016-03-09">
+              2016-03-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/09/Hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/09/Hexo/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <img src="/2016/03/09/Hexo/u=2538191405,1268730134&fm=21&gp=0.jpg" alt="u=2538191405,1268730134&fm=21&gp=0.jpg" title="">
+<h2>动因</h2><br>新学期开始了，这个学期准备养成开始写博客的好习惯。以前什么东西<br>都是在QQ空间里， 后来觉得技术性稍微强一点的就是CSDN和博客园。但是啊我觉<br>得他们的广告和版式确实有点让人不忍直视，毕竟是搞技术的不如自己搭一个博客<br>吧。于是就有了下面的折腾了。能踩的坑我都帮你们踩过了，大家按照我的步骤一<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/09/Hexo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/09/输入输出重定向/" itemprop="url">
                   输入输出重定向
                 </a>
@@ -980,110 +1212,6 @@ ls &amp;&gt;  abc  （以覆盖的方式）
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/09/Hexo/" itemprop="url">
-                  在Windows下搭建Hexo
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-09T13:01:47+08:00" content="2016-03-09">
-              2016-03-09
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/09/Hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/09/Hexo/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <img src="/2016/03/09/Hexo/u=2538191405,1268730134&fm=21&gp=0.jpg" alt="u=2538191405,1268730134&fm=21&gp=0.jpg" title="">
-<h2>动因</h2><br>新学期开始了，这个学期准备养成开始写博客的好习惯。以前什么东西<br>都是在QQ空间里， 后来觉得技术性稍微强一点的就是CSDN和博客园。但是啊我觉<br>得他们的广告和版式确实有点让人不忍直视，毕竟是搞技术的不如自己搭一个博客<br>吧。于是就有了下面的折腾了。能踩的坑我都帮你们踩过了，大家按照我的步骤一<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/09/Hexo/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1127,7 +1255,7 @@ ls &amp;&gt;  abc  （以覆盖的方式）
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

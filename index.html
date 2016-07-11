@@ -260,6 +260,125 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/11/PHP回调函数/" itemprop="url">
+                  PHP回调函数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-11T18:32:28+08:00" content="2016-07-11">
+              2016-07-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/11/PHP回调函数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/11/PHP回调函数/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://i2.piimg.com/567571/5b5739664ac9ce67.jpg" alt=""></p>
+<ul>
+<li><p>回调函数就是在给一个函数传入一个简单的参数无法解决问题的时候给他传入一个过程,从而达到目的</p>
+</li>
+<li><p>在函数调用时给他传入一个函数作为参数就是函数回调。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$arr=array(2,3,5,4,1,6,7,9,8);</div><div class="line">var_dump($arr);</div><div class="line">echo &quot;&lt;/br&gt;&quot;;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//这里是自定义回调函数,返回-1是指将两个元素交换,0和1是不发生改变。</div><div class="line">function myrule($a,$b)&#123;</div><div class="line">    if ($a&gt;$b)&#123;</div><div class="line">        return 1;</div><div class="line">    &#125;</div><div class="line">    elseif ($a&lt;$b)&#123;</div><div class="line">        return -1;</div><div class="line">    &#125;</div><div class="line">    else&#123;</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//usort就是系统函数,但是他的第二个参数是回调函数,这个函数参数就是排序规则</div><div class="line">usort($arr,&quot;myrule&quot;);</div><div class="line">var_dump($arr);</div><div class="line">echo &quot;&lt;/br&gt;&quot;;</div></pre></td></tr></table></figure>
+<ul>
+<li>自己写回调函数,使用变量函数以及回调完成一个简单的过滤条件,如果需多个条件同时满足给一个&amp;&amp;关系即可。</li>
+<li>其中使用的变量函数可以使用系统中的一个叫做call_user_func_array()的函数进行调用,他有两个参数分别是回调函数名称,以及参数数组 </li>
+<li>call_user_func_array(“demo”,array(1,3));其优点在于array中的参数的数量可以比原函数的少,既有默认缺省参数的时候。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">//rule1除去数组中是三的倍数的数</div><div class="line">function rule1($a)&#123;</div><div class="line">    if ($a%3==0)&#123;</div><div class="line">        return true;</div><div class="line">    &#125;else&#123;</div><div class="line">        return false;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//rule2是除去数组中的回文数（从左边读与从右边读是一样的）</div><div class="line">function rule2($a)&#123;</div><div class="line">    if ($a==strrev($a))&#123;</div><div class="line">        return true;</div><div class="line">    &#125;else&#123;</div><div class="line">        return false;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function demo($n,$var)&#123;</div><div class="line">    for ($i=0;$i&lt;$n;$i++)&#123;</div><div class="line">        if (call_user_func_array($var,array(23)))</div><div class="line">        //if ($var($i))</div><div class="line">        &#123;</div><div class="line">            continue;</div><div class="line">        &#125;else&#123;</div><div class="line">            echo $i.&quot;&lt;br&gt;&quot;;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">$var=&quot;rule1&quot;;</div><div class="line">demo(100,$var);</div><div class="line">echo &quot;&lt;/br&gt;&quot;;</div><div class="line">echo &quot;&lt;hr&gt;&quot;;</div><div class="line">$var=&quot;rule2&quot;;</div><div class="line">demo(200,$var);</div><div class="line">echo &quot;&lt;/br&gt;&quot;;</div></pre></td></tr></table></figure>
+<p>1 注意在调用对象里面的方法时我们需要传入一个匿名对象,后面指定函数名<br>2 而在调用类中的静态方法时只需指定类名即可。</p>
+<ul>
+<li>以上两种情况都不能完全使用变量函数只能用系统的回调call_user_func_array(),只是变量函数来传参而不调用<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">class A&#123;</div><div class="line">    function one()&#123;</div><div class="line">    &#125;</div><div class="line">    static function two()&#123;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">demo(200,array(new A,&quot;one&quot;));</div><div class="line">demo(200,array(&quot;A&quot;,&quot;two&quot;));</div></pre></td></tr></table></figure></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/11/PHP函数初步/" itemprop="url">
                   PHP函数初步
                 </a>
@@ -1036,258 +1155,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/03/20/Bash别名与快捷键/" itemprop="url">
-                  Bash别名与快捷键
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-20T22:53:08+08:00" content="2016-03-20">
-              2016-03-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">-Linux</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/20/Bash别名与快捷键/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/20/Bash别名与快捷键/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <img src="/2016/03/20/Bash别名与快捷键/linux01.jpg" alt="linux01.jpg" title="">
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="1-定义别名："><a href="#1-定义别名：" class="headerlink" title="1.定义别名："></a>1.定义别名：</h2><pre><code>alias vi=&apos;vim&apos;
-</code></pre><h2 id="2-查看别名："><a href="#2-查看别名：" class="headerlink" title="2.查看别名："></a>2.查看别名：</h2>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/20/Bash别名与快捷键/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/20/Bash历史命令/" itemprop="url">
-                  Bash历史命令
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-20T22:53:08+08:00" content="2016-03-20">
-              2016-03-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/20/Bash历史命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/20/Bash历史命令/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <img src="/2016/03/20/Bash历史命令/linux1.jpg" alt="linux1.jpg" title="">
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="1-清空历史命令："><a href="#1-清空历史命令：" class="headerlink" title="1.清空历史命令："></a>1.清空历史命令：</h2><pre><code>history -c 
-</code></pre><h2 id="2-强制保存到历史命令文件-bash-history-中："><a href="#2-强制保存到历史命令文件-bash-history-中：" class="headerlink" title="2.强制保存到历史命令文件(~/.bash_history)中："></a>2.强制保存到历史命令文件(~/.bash_history)中：</h2><pre><code>history  -w
-</code></pre><h2 id="3-更改历史命令保存文件存的条数"><a href="#3-更改历史命令保存文件存的条数" class="headerlink" title="3.更改历史命令保存文件存的条数"></a>3.更改历史命令保存文件存的条数</h2><pre><code>&lt;!--more--&gt;
-vim /etc/profile   （profile是环境变量的配置文件）
-HISTZISE=1000
-</code></pre><h2 id="4-历史命令的调用："><a href="#4-历史命令的调用：" class="headerlink" title="4.历史命令的调用："></a>4.历史命令的调用：</h2><pre><code>!n  //重复执行第n条命令
-!!  //重复执行上一条命令
-!字符串  //重复执行最后一条的含有字符串的命令
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/03/20/虚拟机的三种网络连接方式/" itemprop="url">
                   虚拟机的三种网络连接方式
                 </a>
@@ -1391,6 +1258,130 @@ HISTZISE=1000
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/20/Bash通配符/" itemprop="url">
+                  Bash通配符及特殊符号
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-20T22:53:08+08:00" content="2016-03-20">
+              2016-03-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/20/Bash通配符/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/20/Bash通配符/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <img src="/2016/03/20/Bash通配符/jianpan.jpg" alt="jianpan.jpg" title="">
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="1-是任意多个任意字符-任意可以是0"><a href="#1-是任意多个任意字符-任意可以是0" class="headerlink" title="1.*是任意多个任意字符(任意可以是0)"></a>1.*是任意多个任意字符(任意可以是0)</h2><pre><code>ls *abc
+</code></pre><p>会显示所有以abc结尾的或者就是abc的文件<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/20/Bash通配符/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -1434,7 +1425,7 @@ HISTZISE=1000
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
