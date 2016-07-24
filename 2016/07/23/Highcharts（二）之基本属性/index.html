@@ -84,18 +84,43 @@
 
 
 
-<meta name="description" content="正文学习最近这几周都没有写博客和日记，这几天我都在想这么搞得，好像时间越来越不够用了。先说说这几个星期的周末吧，周五一般就是下午玩一会电脑大概到两三点，然后睡一会基本就是四五点了。晚上应该就是看视频吧，反正没做什么特别有价值的事情来着。周六早上就去学生会培训到十二点，确实还是有点累的。每次听完课总觉得头昏脑涨，最近对学生会这边也有点不太上心了，毕竟还是周内太累了。其实来说的话周内并不是像高中一样">
+<meta name="description" content="一.基本组成：
+Highcharts包含标题（Title）：主标题是必须的但是subTTitle不是必须
+
+坐标轴（Axis）：有x坐标（xAxis）和y坐标（yAxis）
+
+数据列（Series）：每个曲线，每个柱形条组，每个饼图的部分
+
+数据提示框（Tooltip）：鼠标放上去的提示框
+
+图例（Legend）：通过点击标示可以显示或隐藏该数据列">
 <meta property="og:type" content="article">
-<meta property="og:title" content="最近几周的情况">
-<meta property="og:url" content="http://xpf199741.github.io/2016/04/17/最近几周的情况/index.html">
+<meta property="og:title" content="Highcharts（二）之基本属性">
+<meta property="og:url" content="http://xpf199741.github.io/2016/07/23/Highcharts（二）之基本属性/index.html">
 <meta property="og:site_name" content="昨 夜 凛 雨">
-<meta property="og:description" content="正文学习最近这几周都没有写博客和日记，这几天我都在想这么搞得，好像时间越来越不够用了。先说说这几个星期的周末吧，周五一般就是下午玩一会电脑大概到两三点，然后睡一会基本就是四五点了。晚上应该就是看视频吧，反正没做什么特别有价值的事情来着。周六早上就去学生会培训到十二点，确实还是有点累的。每次听完课总觉得头昏脑涨，最近对学生会这边也有点不太上心了，毕竟还是周内太累了。其实来说的话周内并不是像高中一样">
-<meta property="og:image" content="http://xpf199741.github.io/2016/04/17/最近几周的情况/4116ae51f3deb48fbf4a090bf61f3a292cf57834.jpg">
-<meta property="og:updated_time" content="2016-06-04T05:13:06.000Z">
+<meta property="og:description" content="一.基本组成：
+Highcharts包含标题（Title）：主标题是必须的但是subTTitle不是必须
+
+坐标轴（Axis）：有x坐标（xAxis）和y坐标（yAxis）
+
+数据列（Series）：每个曲线，每个柱形条组，每个饼图的部分
+
+数据提示框（Tooltip）：鼠标放上去的提示框
+
+图例（Legend）：通过点击标示可以显示或隐藏该数据列">
+<meta property="og:updated_time" content="2016-07-24T03:20:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="最近几周的情况">
-<meta name="twitter:description" content="正文学习最近这几周都没有写博客和日记，这几天我都在想这么搞得，好像时间越来越不够用了。先说说这几个星期的周末吧，周五一般就是下午玩一会电脑大概到两三点，然后睡一会基本就是四五点了。晚上应该就是看视频吧，反正没做什么特别有价值的事情来着。周六早上就去学生会培训到十二点，确实还是有点累的。每次听完课总觉得头昏脑涨，最近对学生会这边也有点不太上心了，毕竟还是周内太累了。其实来说的话周内并不是像高中一样">
-<meta name="twitter:image" content="http://xpf199741.github.io/2016/04/17/最近几周的情况/4116ae51f3deb48fbf4a090bf61f3a292cf57834.jpg">
+<meta name="twitter:title" content="Highcharts（二）之基本属性">
+<meta name="twitter:description" content="一.基本组成：
+Highcharts包含标题（Title）：主标题是必须的但是subTTitle不是必须
+
+坐标轴（Axis）：有x坐标（xAxis）和y坐标（yAxis）
+
+数据列（Series）：每个曲线，每个柱形条组，每个饼图的部分
+
+数据提示框（Tooltip）：鼠标放上去的提示框
+
+图例（Legend）：通过点击标示可以显示或隐藏该数据列">
 
 
 
@@ -113,7 +138,7 @@
   };
 </script>
 
-  <title> 最近几周的情况 | 昨 夜 凛 雨 </title>
+  <title> Highcharts（二）之基本属性 | 昨 夜 凛 雨 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -263,7 +288,7 @@
             
             
               
-                最近几周的情况
+                Highcharts（二）之基本属性
               
             
           </h1>
@@ -275,38 +300,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-17T10:52:50+08:00" content="2016-04-17">
-              2016-04-17
+            <time itemprop="dateCreated" datetime="2016-07-23T17:13:08+08:00" content="2016-07-23">
+              2016-07-23
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/日记/" itemprop="url" rel="index">
-                    <span itemprop="name">日记</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/17/最近几周的情况/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/17/最近几周的情况/" itemprop="commentsCount"></span>
+                <a href="/2016/07/23/Highcharts（二）之基本属性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/23/Highcharts（二）之基本属性/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -329,9 +335,34 @@
       
 
       
-        <img src="/2016/04/17/最近几周的情况/4116ae51f3deb48fbf4a090bf61f3a292cf57834.jpg" alt="4116ae51f3deb48fbf4a090bf61f3a292cf57834.jpg" title="">
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><p>最近这几周都没有写博客和日记，这几天我都在想这么搞得，好像时间越来越不够用了。<br><br>先说说这几个星期的周末吧，周五一般就是下午玩一会电脑大概到两三点，然后睡一会基本就是四五点了。晚上应该就是看视频吧，反正没做什么特别有价值的事情来着。周六早上就去学生会培训到十二点，确实还是有点累的。每次听完课总觉得头昏脑涨，最近对学生会这边也有点不太上心了，毕竟还是周内太累了。其实来说的话周内并不是像高中一样那么多的课，但是非常累应该就是每天的生活都是非常不规律的<a id="more"></a>，晚上睡的时间太少，上课的时候还是要逼着自己打起精神来，但是效果也不是太好，以前是上课根本打不起精神，现在还是要好一点了。但是我也应该从那边收心了，总是想着一些没用的，时间到时一定会给出答案的。或喜或悲我现在都不应该把它看得太重，太影响心情。<br></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>下午就去一下实验室，搞一天。有时候确实学了一些东西。有时候在那就有点不自在，浪费了不少时间。不过有一点可以肯定的是，我确实认认真真的学了一门有用的语言PHP，和他的框架。现在已经开始做模板了，我想一定要认真的做好，就在运动会期间做好吧。老师和学长都还比较看中我，我还是希望尽早接触到开发，真真用我学到的这门语言去开发，去让全校使用我的代码，确实也是一件令人开心的事情。<br><br>周天每次说的早上去做题下午看书的，下午老是做别的事情去了。这段时间确实对PHP很疯狂，好多事情都被搁置了，这样也造就了我这么快掌握了PHP的框架和原生PHP。可是我还是不能这样，对一方投入太对多。一是会厌倦，而是影响其他的东西，比如学习。现在就感到离散就有点吃力了。所以还是要均衡。<br><br>最近这几周脚特别疼，所以一直就没有跑步了。这个星期就又要开始了，认真过好每一天。</p>
+        <h2 id="一-基本组成："><a href="#一-基本组成：" class="headerlink" title="一.基本组成："></a>一.基本组成：</h2><ol>
+<li><p>Highcharts包含标题（Title）：主标题是必须的但是subTTitle不是必须</p>
+</li>
+<li><p>坐标轴（Axis）：有x坐标（xAxis）和y坐标（yAxis）</p>
+</li>
+<li><p>数据列（Series）：每个曲线，每个柱形条组，每个饼图的部分</p>
+</li>
+<li><p>数据提示框（Tooltip）：鼠标放上去的提示框</p>
+</li>
+<li><p>图例（Legend）：通过点击标示可以显示或隐藏该数据列</p>
+</li>
+<li><a id="more"></a>
+</li>
+<li><p>版权信息（Credits）：一般是highcharts的官网，指定credits.enabled=false不让显示</p>
+</li>
+<li><p>导出功能按钮（Exporting）：需要包含exporting.js</p>
+</li>
+<li><p>标示线（PlotLines）：主动添加如平均线等</p>
+</li>
+</ol>
+<h2 id="二-参数属性："><a href="#二-参数属性：" class="headerlink" title="二.参数属性："></a>二.参数属性：</h2><p>1,调用highcharts：</p>
+<p>方法一：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(function () &#123;</div><div class="line">    	$(&quot;.chart&quot;).highcharts(&#123;&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>方法二：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var charts = new Highcharts.Chart(&#123;</div><div class="line">    // Highcharts 配置</div><div class="line">    chart : &#123;</div><div class="line">        renderTo : &quot;container&quot;  // 注意这里一定是 ID 选择器</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>2.设置表格宽高：<br>等同于设置div的宽高：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">style=&quot;width: 800px ;height: 400px&quot;</div></pre></td></tr></table></figure>
+<p>3.图表样式：<br>常见的有：border、backgroundColor、margin、spacing、style</p>
 
       
     </div>
@@ -356,16 +387,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/04/关于apache端口被占用/" rel="next" title="关于apache端口被占用">
-                <i class="fa fa-chevron-left"></i> 关于apache端口被占用
+              <a href="/2016/07/11/PHP回调函数/" rel="next" title="PHP回调函数">
+                <i class="fa fa-chevron-left"></i> PHP回调函数
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/29/C++/" rel="prev" title="C++到底能做什么">
-                C++到底能做什么 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/23/Highcharts（三）之标题/" rel="prev" title="Highcharts（三）之标题">
+                Highcharts（三）之标题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -381,10 +412,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/04/17/最近几周的情况/"
-     data-title="最近几周的情况"
+        <div class="ds-share flat" data-thread-key="2016/07/23/Highcharts（二）之基本属性/"
+     data-title="Highcharts（二）之基本属性"
      data-content=""
-     data-url="http://xpf199741.github.io/2016/04/17/最近几周的情况/">
+     data-url="http://xpf199741.github.io/2016/07/23/Highcharts（二）之基本属性/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -409,8 +440,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/17/最近几周的情况/"
-           data-title="最近几周的情况" data-url="http://xpf199741.github.io/2016/04/17/最近几周的情况/">
+      <div class="ds-thread" data-thread-key="2016/07/23/Highcharts（二）之基本属性/"
+           data-title="Highcharts（二）之基本属性" data-url="http://xpf199741.github.io/2016/07/23/Highcharts（二）之基本属性/">
       </div>
     
   </div>
@@ -494,7 +525,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#正文"><span class="nav-number">1.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#学习"><span class="nav-number">1.1.</span> <span class="nav-text">学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.2.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-基本组成："><span class="nav-number">1.</span> <span class="nav-text">一.基本组成：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-参数属性："><span class="nav-number">2.</span> <span class="nav-text">二.参数属性：</span></a></li></ol></div>
             
           </div>
         </section>
