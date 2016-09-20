@@ -1548,7 +1548,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #dbf02f;
+  background: #0ecf58;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2424,4 +2424,14 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+.img-topic {
+  max-width: 300px;
+  max-height: 1800px;
+  display: block;
+  margin-left: 0.7em;
+  margin-right: 0.7em;
+  padding: 0;
+  float: right;
+  clear: right;
 }

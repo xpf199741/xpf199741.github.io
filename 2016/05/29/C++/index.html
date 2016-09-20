@@ -1,0 +1,632 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="前言我做程序员5年多了，擅长c#,b/s结构的项目开发.今天看到有人说c++薪水高，想讲两句。如果您正发愁该学哪种编程语言，那么我的意见也许能作为您的参考。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++到底能做什么">
+<meta property="og:url" content="http://xpf199741.github.io/2016/05/29/C++/index.html">
+<meta property="og:site_name" content="昨 夜 凛 雨">
+<meta property="og:description" content="前言我做程序员5年多了，擅长c#,b/s结构的项目开发.今天看到有人说c++薪水高，想讲两句。如果您正发愁该学哪种编程语言，那么我的意见也许能作为您的参考。">
+<meta property="og:image" content="http://xpf199741.github.io/2016/05/29/C++/C++.jpg">
+<meta property="og:updated_time" content="2016-06-01T09:42:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++到底能做什么">
+<meta name="twitter:description" content="前言我做程序员5年多了，擅长c#,b/s结构的项目开发.今天看到有人说c++薪水高，想讲两句。如果您正发愁该学哪种编程语言，那么我的意见也许能作为您的参考。">
+<meta name="twitter:image" content="http://xpf199741.github.io/2016/05/29/C++/C++.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> C++到底能做什么 | 昨 夜 凛 雨 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?92700c174a6dfb676dda18a2fa97dcb3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">昨 夜 凛 雨</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                C++到底能做什么
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-29T23:50:14+08:00" content="2016-05-29">
+              2016-05-29
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/29/C++/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/29/C++/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <img src="/2016/05/29/C++/C++.jpg" alt="C++.jpg" title="">
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我做程序员5年多了，擅长c#,b/s结构的项目开发.今天看到有人说c++薪水高，想讲两句。如果您正发愁该学哪种编程语言，那么我的意见也许能作为您的参考。<a id="more"></a>在这里，我会从就业的角度来分析这几种语言。学技术是为了挣钱，这对于我是不变的真理。</p>
+<h1 id="目前状况"><a href="#目前状况" class="headerlink" title="目前状况"></a>目前状况</h1><p>随着计算机硬件方面的科技不断创新，相应的软件系统也越来越复杂和庞大，最初的汇编，C语言已经很难适应高层的开发，其主要应用场合仅限于底层硬件接口或性能瓶颈，相信不会有人傻到用汇编或C去写软件界面吧。其实不单是汇编，C，即使是C++，也几乎已经成为了底层的语言。而大型的软件系统，全省联网使用甚至全国联网使用的，基本上都是使用c#或java来开发，用c#和java的好处很明显，成本低，健壮性更强。因为高度封装，很多东西无需程序员考虑，自然出的BUG也就更少。而出的BUG，一般也比较容易调试。这种便利性等于是解放了程序员的双手，让他们可以专注于业务需求。因为专注于需求，于是做出的软件用户体验便相当出色，这种易用性与友好的用户体验在以前c,c++的年代是不常见的.</p>
+<p>而c#,java之所以薪水难上去，也正是因为它们相对来说更简单。更简单 -&gt; 更多人使用 -&gt; 竞争更剧烈 -&gt; 薪水更低。话讲到这里，也许你要想“那我还是学c++好了，学c++才挣钱多”，但事实上这种想法过于简单。听我分析：<br>当前中国的软件行业落后，这是人所共知的事情。但这也意味着这个行业的前景极为广阔。在将来，许许多多的单位和企业都会陆续更换高级语言写出的系统，因为高级语言写的系统更好用，更贴近需求。这个是趋势。<br>那么c++以及c++以前的c,汇编是不是要退出历史舞台了？答案是“是”，当然这会是一个非常长的过程，但最终职场上的底层代码编写者会越来越少，因为很多支持高层开发的底层代码一旦完成，便开始重复使用，只需很少人维护就可以了.这么一来底层的需求是肯定在减少了，一旦系统稳定，谁会轻易去动底层的代码?因此我们可以预见，以后在软件行业，投在c++方面的资金会慢慢减少,整个市场会逐渐变小。这里面的机会自然也会相应减少。所以我个人认为，如果你要跟大多数人一样娶老婆生小孩赡养父母供这一家子人，而你自己因为各种原因无法拥有强大的实力的话，那么还是量力而为选择不参与这个市场比较好。你刚毕业时有很强的学习动力，可一旦过了三十岁，身体开始走下坡路，生活中大大小小的事情把你整得焦头烂额，这个时候还要靠钻研技术来挣钱的话，就太累了。</p>
+<p>而高级语言开发，就拿我擅长的c#来说，一般都对技术要求不高，这类开发的薪水一般来自两块：(1)你的编码劳动 (2)你的业务知识积累。代码是不值钱的，值钱的是业务知识。当你积累到一定层次的时候，自然有人打电话问你愿不愿意跳槽。到那个时候你拿的薪水，相信不会让自己尴尬。</p>
+<p>但是你最初若选择c++这类底层，很可能到这时候还只是底下的一个程序员，每天负责解决各项技术难题。老板不会让你升迁，因为你一旦升迁底下重要的活就没人干了，要再找人也难。而你若是通过积累业务知识来提升自己，一方面你是在无压力的工作环境中完成提升，另一方面你一旦提升到合适的层次，自然就是凭着自己掌握的业务知识指挥底下的代码工人干活。那时的轻松自然不言而喻，而薪水也肯定不会太低。</p>
+<p>当然，走这条路有极限，它很难像c++那样走的更远，但我之所以建议大家选择高级语言，也有我的道理：人的生命是有限的，在人生与财富之间你需要有一个权衡。如果你前半生都在拼命，等开始享受的时候发现自己早就老掉了，你会不会难过？所以能在压力比较小的工作环境中挣得稳定的生活，并逐渐提升自己，这样的人生应该是更值得追求的。而事实上在这条路上走的人，中途改行的可能性也更小。</p>
+<h1 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h1><p>其实也可以这样比喻：c++就像独木桥，桥的尽头有更多的金子等着你，只要你实力强能走过这根圆木你一定比大多数人更成功。而java,c#像一座大桥，你可以闲庭信步慢悠悠散着步走过去，代价是你挣的钱更少，能达到的高度比不了c++，但同时也有更多其他的人生体验。你想走哪座桥，你自己选吧。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/17/最近几周的情况/" rel="next" title="最近几周的情况">
+                <i class="fa fa-chevron-left"></i> 最近几周的情况
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/09/关于高考/" rel="prev" title="关于高考">
+                关于高考 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/05/29/C++/"
+     data-title="C++到底能做什么"
+     data-content=""
+     data-url="http://xpf199741.github.io/2016/05/29/C++/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/29/C++/"
+           data-title="C++到底能做什么" data-url="http://xpf199741.github.io/2016/05/29/C++/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="徐鹏飞" />
+          <p class="site-author-name" itemprop="name">徐鹏飞</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目前状况"><span class="nav-number">2.</span> <span class="nav-text">目前状况</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#尾声"><span class="nav-number">3.</span> <span class="nav-text">尾声</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">徐鹏飞</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xpf199741"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
